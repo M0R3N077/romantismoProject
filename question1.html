@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta 1 - Escolha seu Caminho</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./src/js/questions.js" defer></script>
+</head>
+<body>
+    <div class="question-container">
+        <p>Você acorda confuso, sem lembrar de quem é. Diante de você, um viajante olha intrigado e lhe pergunta:</p>
+        <p><strong>"De onde você vem, forasteiro?"</strong></p>
+        <img src="assets/pergunta1.jpg" alt="Imagem ilustrativa">
+
+        <button class="choice" data-choice="indianista">"Venho das matas, onde a liberdade se entrelaça com a natureza..."</button>
+        <button class="choice" data-choice="urbanista">"Sou de uma grande cidade, onde a elegância dos salões..."</button>
+        <button class="choice" data-choice="regionalista">"Minha terra é árida e montanhosa. O trabalho duro..."</button>
+        <button class="choice" data-choice="historico">"Eu venho de terras distantes, em busca de riquezas..."</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p id="result-text"></p>
+            <button id="next-button" style="display: none;">Avançar</button>
+        </div>
+    </div>
+</body>
+</html>
