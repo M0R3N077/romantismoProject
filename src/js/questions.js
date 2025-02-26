@@ -14,7 +14,18 @@ const chooseOption = (choice, btn) => {
     localStorage.setItem("score", JSON.stringify(score));
 
     document.getElementById("result-text").innerText = messages[currentPage][choice] || "Escolha inválida!";
-    document.getElementById("next-button").style.display = "block";
+    
+    const progress = JSON.parse(localStorage.getItem("progress")) || { currentQuestion: 1 };
+    const totalQuestions = 7;
+
+    if (progress.currentQuestion === totalQuestions) {
+        document.getElementById("next-button").style.display = "none";
+        document.getElementById("finish-button").style.display = "block"; 
+        displayFinalResult();
+    } else {
+        document.getElementById("next-button").style.display = "block";
+        document.getElementById("finish-button").style.display = "none";
+    }
 
     document.querySelectorAll(".choice").forEach(b => {
         if (b !== btn) b.style.display = "none";
@@ -39,5 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("progress", JSON.stringify(progress));
 
         window.location.href = "game.html";
+    });
+
+    document.getElementById("finish-button")?.addEventListener("click", () => {
+        window.location.href = "final.html";
     });
 });

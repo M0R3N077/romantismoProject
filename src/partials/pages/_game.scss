@@ -4,9 +4,7 @@
     justify-content:center;
     align-items:center;
     flex-direction: column;
-    background: linear-gradient(135deg, #556a39, #68744b, #2a4916, #1d3201);
-    background-size: 300% 300%;
-    animation: gradient 10s ease infinite;
+    background: url('../../../assets/backgrounds/fundoMandeira.png') no-repeat center center/cover;
 
 }
 @keyframes gradient {
@@ -19,15 +17,15 @@
 
 #gameCanvas {
     border: 2px solid black;
-    background: url('../../../assets/backgrounds/greenBg.jpg') no-repeat center center/cover;
+    background: url('../../../assets/backgrounds/divJogo.png') no-repeat center center/cover;
     display: block;
-    width: 800px;
-    height: 500px;
+    width: 550px; //719px Tamanho original da foto
+    height: 574px; //768px Tamanho original da foto
 }
 
 .character {
-    width: 100px;
-    height: 130px;
+    // width: 100px;
+    // height: 130px;
     background: url('../../../assets/characters/personagemPrincipal.png') no-repeat center/cover;
     position: absolute;
     z-index: 1000;
@@ -55,7 +53,7 @@
     font-size: 40px;
     display: inline-block;
     position: relative;
-    color: rgb(141,145,22); /* Define a cor do texto como vermelho */
+    color: red; /* Define a cor do texto como vermelho */
     text-shadow: 
         -2px -2px 0 white,  
          2px -2px 0 white,  
