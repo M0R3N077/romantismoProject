@@ -1,7 +1,7 @@
 const progress = JSON.parse(localStorage.getItem("progress")) || { currentQuestion: 1 };
 
-// const gameTitle = document.getElementById("game-title");
-// gameTitle.innerText = `Siga para a porta de número ${progress.currentQuestion}`;
+const gameTitle = document.getElementById("game-title");
+gameTitle.innerText = `Siga para a porta de número ${progress.currentQuestion}`;
 
 const character = { x: 50, y: 200, width: 60, height: 80 };
 

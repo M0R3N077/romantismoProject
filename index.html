@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romantismo - O Jogo</title>
     <link rel="stylesheet" href="style.css">
+    <!-- BI -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- SWIPER -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+    <!-- SCRIPTS -->
     <script src="./src/js/index.js" defer></script>
 </head>
 <body>
-    
     <div id="preloader">
         <div class="loader"></div>
     </div>
@@ -42,5 +48,165 @@
             </div>
         </div>
     </div>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <img id="modal-image" src="" alt="Imagem do Modal">
+            <div>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDER -->
+    <section class="slider">
+        <!-- LIST -->
+        <div class="list">
+            <div class="item active">
+                <img src="https://multirio.rio.rj.gov.br/images/historia_do_brasil/M2-cap6/1_Tomada_Bastille_t.jpg">
+                <div class="content">
+                    <p>13 de Maio de 1888</p>
+                    <h2>Abolição da Escravatura</h2>
+                    <p>
+                        Em 1888, o Brasil foi o último país das Américas a abolir a escravidão com a assinatura da Lei
+                        Áurea. Apesar da libertação legal, os ex-escravizados enfrentaram ainda mais décadas de exclusão
+                        social e discriminação.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="">
+                <div class="content">
+                    <p>1966-1982</p>
+                    <h2>Movimento Panteras Negras</h2>
+                    <p>
+                        Nos Estados Unidos, o movimento Panteras Negras foi uma organização revolucionária que se
+                        destacou por sua luta contra a opressão policial, o racismo sistêmico e pela defesa dos direitos
+                        civis dos negros.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="">
+                <div class="content">
+                    <p>1835</p>
+                    <h2>Revolta dos Malês</h2>
+                    <p>
+                        A Revolta dos Malês foi uma insurreição de escravizados de origem islâmica em Salvador, no
+                        Brasil. Representou um importante levante contra a opressão e a intolerância religiosa
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="">
+                <div class="content">
+                    <p>Sec. XVII-XVIII</p>
+                    <h2>Quilombo dos Palmares e Zumbi</h2>
+                    <p>
+                        O Quilombo dos Palmares foi o maior quilombo existente no Brasil durante o período colonial e chegou a possuir até 20 mil habitantes. Foi destruído pelos portugueses, em 1694.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="">
+                <div class="content">
+                    <p>1954-1968</p>
+                    <h2>Movimento dos Direitos Civis nos EUA</h2>
+                    <p>
+                        O Movimento pelos Direitos Civis nos EUA, com líderes como Martin Luther King Jr. e Rosa Parks,
+                        foi fundamental na luta contra a segregação racial e pela igualdade de direitos dos negros
+                        americanos.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ARROWS -->
+        <div class="arrows">
+            <button id="prev"><i class="bi bi-caret-left-fill"></i></button>
+            <button id="next"><i class="bi bi-caret-right-fill"></i></button>
+        </div>
+        <!-- THUMBNAIL -->
+        <div class="thumbnail">
+            <div class="item active">
+                <img src="">
+                <div class="content">
+                    Abolição da Escravatura
+                </div>
+            </div>
+            <div class="item">
+                <img src="">
+                <div class="content">
+                    Panteras Negras
+                </div>
+            </div>
+            <div class="item">
+                <img src="">
+                <div class="content">
+                    Revolta dos Malês
+                </div>
+            </div>
+            <div class="item">
+                <img src="">
+                <div class="content">
+                    Quilombo dos Palmares
+                </div>
+            </div>
+            <div class="item">
+                <img src="">
+                <div class="content">
+                    Direitos Civis
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARDS SLIDER -->
+    <section class="container swiper">
+        <div class="slider-wrapper">
+            <div class="card-list swiper-wrapper">
+                <div class="card-item swiper-slide">
+                    <img src="https://static.portugues.com.br/conteudo/images/jose-alencar-autor-iracema-5a9ffd16cea43.jpg">
+                    <h2 class="user-name">Martin Luther King Jr.</h2>
+                    <p class="user-profession">Ativista político estadunidense</p>
+                    <button data-id="1">Saiba mais</button>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="https://static.portugues.com.br/conteudo/images/jose-alencar-autor-iracema-5a9ffd16cea43.jpg">
+                    <h2 class="user-name">Nelson Mandela</h2>
+                    <p class="user-profession">Ex-Presidente da África do Sul</p>
+                    <button data-id="2">Saiba mais</button>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="https://static.portugues.com.br/conteudo/images/jose-alencar-autor-iracema-5a9ffd16cea43.jpg">
+                    <h2 class="user-name">Carolina Maria de Jesus</h2>
+                    <p class="user-profession">Escritora e compositora brasileira</p>
+                    <button data-id="3">Saiba mais</button>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="https://static.portugues.com.br/conteudo/images/jose-alencar-autor-iracema-5a9ffd16cea43.jpg">
+                    <h2 class="user-name">Zumbi dos Palmares</h2>
+                    <p class="user-profession">Líder quilombola brasileiro</p>
+                    <button data-id="4">Saiba mais</button>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="https://static.portugues.com.br/conteudo/images/jose-alencar-autor-iracema-5a9ffd16cea43.jpg">
+                    <h2 class="user-name">Elizabeth Eckford</h2>
+                    <p class="user-profession">Ativista dos direitos civis americana</p>
+                    <button data-id="5">Saiba mais</button>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="https://static.portugues.com.br/conteudo/images/jose-alencar-autor-iracema-5a9ffd16cea43.jpg">
+                    <h2 class="user-name">Djamila Ribeiro</h2>
+                    <p class="user-profession">Filósofa e pesquisadora brasileira</p>
+                    <button data-id="6">Saiba mais</button>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <button class="swiper-slide-button swiper-button-prev"></button>
+            <button class="swiper-slide-button swiper-button-next"></button>
+        </div>
+    </section>
 </body>
 </html>

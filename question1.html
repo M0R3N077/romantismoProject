@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pergunta 1 - Escolha seu Caminho</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./src/js/questions.js" defer></script>
+    <script type="module" src="./src/js/questions.js" defer></script>
 </head>
 <body>
     <div class="question-container">
@@ -13,16 +13,16 @@
         <p><strong>"De onde você vem, forasteiro?"</strong></p>
         <img src="assets/pergunta1.jpg" alt="Imagem ilustrativa">
 
-        <button class="choice" data-choice="indianista">"Venho das matas, onde a liberdade se entrelaça com a natureza..."</button>
-        <button class="choice" data-choice="urbanista">"Sou de uma grande cidade, onde a elegância dos salões..."</button>
-        <button class="choice" data-choice="regionalista">"Minha terra é árida e montanhosa. O trabalho duro..."</button>
-        <button class="choice" data-choice="historico">"Eu venho de terras distantes, em busca de riquezas..."</button>
+        <button class="choice" data-choice="indianista">"Venho das matas, onde a liberdade se entrelaça com a natureza. Conheço os rios e os cantos dos pássaros melhor do que qualquer homem da cidade."</button>
+        <button class="choice" data-choice="urbanista">"Sou de uma grande cidade, onde a elegância dos salões e as intrigas políticas moldam o destino de muitos."</button>
+        <button class="choice" data-choice="regionalista">"Minha terra é árida e montanhosa. O trabalho duro no campo forjou meu espírito"</button>
+        <button class="choice" data-choice="historico">"Eu venho de terras distantes, em busca de riquezas e poder. A Coroa tem planos para esse Novo Mundo."</button>
     </div>
 
-    <div id="modal" class="modal">
-        <div class="modal-content">
+    <div id="next-button-modal" class="next-button-modal">
+        <div class="next-button-modal-content">
             <p id="result-text"></p>
-            <button id="next-button" style="display: none;">Avançar</button>
+            <button id="next-button" style="display: none">Avançar</button>
         </div>
     </div>
 </body>

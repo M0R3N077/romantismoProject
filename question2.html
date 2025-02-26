@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pergunta 2 - Escolha seu Caminho</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./src/js/questions.js" defer></script>
+    <script type="module" src="./src/js/questions.js" defer></script>
 </head>
 <body>
     <div class="question-container">
-        <p>Você acorda em meio a um ambiente desconhecido, a mente nebulosa. Um viajante se aproxima e pergunta:</p>
-        <p><strong>"O que define sua jornada, forasteiro?"</strong></p>
+        <p>Após sua resposta, você continua sua jornada e encontra uma cena inesperada: um grupo de homens discute fervorosamente sobre o futuro do Brasil. Você se aproxima e ouve um deles perguntar: </p>
+        <p><strong>"O que você considera mais importante para o futuro deste país?" </strong></p>
         <img src="" alt="Imagem ilustrativa">
 
-        <button class="choice" data-choice="indianista">"Busco a essência das origens, onde a terra e o espírito são um só..."</button>
-        <button class="choice" data-choice="urbanista">"Sigo os caminhos da sociedade, onde a ambição e o requinte ditam o destino..."</button>
-        <button class="choice" data-choice="regionalista">"Minha força vem da tradição, moldada pelo suor e pelas raízes de meu povo..."</button>
-        <button class="choice" data-choice="historico">"Carrego comigo as marcas do passado, guiado pelas sombras de grandes feitos..."</button>
+        <button class="choice" data-choice="indianista">"A tradição dos povos nativos deve ser preservada. A terra não nos pertence, somos apenas seus guardiões." </button>
+        <button class="choice" data-choice="urbanista">"A sociedade precisa se modernizar, a cidade cresce e com ela, novas ideias e desafios." </button>
+        <button class="choice" data-choice="regionalista">""A vida no campo e a luta do povo simples são a verdadeira identidade deste país." </button>
+        <button class="choice" data-choice="historico">"O progresso exige ordem e estratégia. A Coroa precisa consolidar seu domínio sobre esta terra."</button>
     </div>
 
-    <div id="modal" class="modal">
-        <div class="modal-content">
+    <div id="next-button-modal" class="next-button-modal">
+        <div class="next-button-modal-content">
             <p id="result-text"></p>
             <button id="next-button" style="display: none;">Avançar</button>
         </div>
