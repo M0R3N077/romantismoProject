@@ -177,7 +177,12 @@
     opacity: 0;
     transition: 0.5s;
     font-family: "Poppins";
-    font-weight: 500;
+    font-weight: 300;
+}
+
+.slider .list .btn-class-name{
+    padding: 5px 10px;
+    font-size: 15px;
 }
 
 .slider .list .item img {
@@ -231,18 +236,21 @@
 
 .slider .list .item.active p:nth-child(1),
 .slider .list .item.active h2,
-.slider .list .item.active p:nth-child(3) {
+.slider .list .item.active p:nth-child(3),
+.slider .list .btn-class-name {
     transform: translateY(30px);
     filter: blur(20px);
     opacity: 0;
     animation: showContent .5s .7s ease-in-out 1 forwards;
 }
 
-.slider .list .item.active h2 {
+.slider .list .item.active h2,
+.slider .list .btn-class-name {
     animation-delay: 1s;
 }
 
-.slider .list .item.active p:nth-child(3) {
+.slider .list .item.active p:nth-child(3),
+.slider .list .btn-class-name {
     animation-duration: 1.3s;
 }
 

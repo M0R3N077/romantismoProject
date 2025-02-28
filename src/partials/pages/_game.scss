@@ -15,6 +15,30 @@
     100% { background-position: 0% 50%; } /* Volta à posição inicial */
 }
 
+.audio-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.audio-controls button {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.audio-controls button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+
 #gameCanvas {
     border: 2px solid black;
     background: url('../../../assets/backgrounds/divJogo.png') no-repeat center center/cover;

@@ -190,7 +190,12 @@ body {
   opacity: 0;
   transition: 0.5s;
   font-family: "Poppins";
-  font-weight: 500;
+  font-weight: 300;
+}
+
+.slider .list .btn-class-name {
+  padding: 5px 10px;
+  font-size: 15px;
 }
 
 .slider .list .item img {
@@ -244,18 +249,21 @@ body {
 }
 .slider .list .item.active p:nth-child(1),
 .slider .list .item.active h2,
-.slider .list .item.active p:nth-child(3) {
+.slider .list .item.active p:nth-child(3),
+.slider .list .btn-class-name {
   transform: translateY(30px);
   filter: blur(20px);
   opacity: 0;
   animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
 }
 
-.slider .list .item.active h2 {
+.slider .list .item.active h2,
+.slider .list .btn-class-name {
   animation-delay: 1s;
 }
 
-.slider .list .item.active p:nth-child(3) {
+.slider .list .item.active p:nth-child(3),
+.slider .list .btn-class-name {
   animation-duration: 1.3s;
 }
 
@@ -542,6 +550,29 @@ body {
     background-position: 0% 50%;
   } /* Volta à posição inicial */
 }
+.audio-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.audio-controls button {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.audio-controls button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+
 #gameCanvas {
   border: 2px solid black;
   background: url("../../../assets/backgrounds/divJogo.png") no-repeat center center/cover;
