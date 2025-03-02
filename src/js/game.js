@@ -178,7 +178,7 @@ let musicOn = true;
 
 // 👣 Som de passos
 const stepSound = new Audio("../../../assets/sounds/steps.mp3");
-stepSound.volume = 0.5;
+stepSound.volume = 1;
 let stepsOn = true;
 
 // 🎛️ Controle de música
