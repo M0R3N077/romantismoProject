@@ -10,6 +10,11 @@ body{
     min-height: 100dvh;
 }
 
+@font-face {
+    font-family: "Machinery";
+    src: url(./assets/fonts/MachineryScript_PERSONAL_USE_ONLY.otf);
+}
+
 @import "src/partials/pages/index";
 @import "src/partials/pages/game";
 @import "src/partials/pages/question";
