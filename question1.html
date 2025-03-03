@@ -8,6 +8,7 @@
     <script type="module" src="./src/js/questions.js" defer></script>
 </head>
 <body id="bodyQuestionOne">
+  <audio id="writing-sound" src="./assets/sounds/writing-sound.mp3" autoplay muted loop></audio>
     <video autoplay muted id="bg-video">
         <source src="./assets/backgrounds/videoQuestion.mp4" type="video/mp4">
         Seu navegador não suporta vídeos em HTML5.
@@ -19,13 +20,53 @@
         <!-- <img src="assets/pergunta1.jpg" alt="Imagem ilustrativa"> -->
 
         <div class="choices-um">
-        <button class="choice " data-choice="indianista">"Venho das matas, onde a liberdade se entrelaça com a natureza. Conheço os rios e os cantos dos pássaros melhor do que qualquer homem da cidade."</button>
+            <button class="choice" data-choice="indianista">
+                "Venho das matas, onde a liberdade se entrelaça com a natureza..."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <!-- Linha 1 com uma leve curvatura para parecer desenhada à mão -->
+                  <path class="x-line" d="M20,20 Q50,25 80,80"
+                    stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                  <!-- Linha 2 com uma leve curvatura -->
+                  <path class="x-line" d="M80,20 Q50,15 20,80"
+                    stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+              </button>
         
-        <button class="choice" data-choice="urbanista">"Sou de uma grande cidade, onde a elegância dos salões e as intrigas políticas moldam o destino de muitos."</button>
+        <button class="choice" data-choice="urbanista">
+            "Sou de uma grande cidade, onde a elegância dos salões e as intrigas políticas moldam o destino de muitos."
+            <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <!-- Linha 1 com uma leve curvatura para parecer desenhada à mão -->
+                <path class="x-line" d="M20,20 Q50,25 80,80"
+                  stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                <!-- Linha 2 com uma leve curvatura -->
+                <path class="x-line" d="M80,20 Q50,15 20,80"
+                  stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+              </svg>
+        </button>
     </div>
     <div class="choices-dois">
-        <button class="choice" data-choice="regionalista">"Minha terra é árida e montanhosa. O trabalho duro no campo forjou meu espírito"</button>
-        <button class="choice" data-choice="historico">"Eu venho de terras distantes, em busca de riquezas e poder. A Coroa tem planos para esse Novo Mundo."</button>
+        <button class="choice" data-choice="regionalista">
+            "Minha terra é árida e montanhosa. O trabalho duro no campo forjou meu espírito"
+            <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <!-- Linha 1 com uma leve curvatura para parecer desenhada à mão -->
+                <path class="x-line" d="M20,20 Q50,25 80,80"
+                  stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                <!-- Linha 2 com uma leve curvatura -->
+                <path class="x-line" d="M80,20 Q50,15 20,80"
+                  stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+              </svg>
+        </button>
+        <button class="choice" data-choice="historico">
+            "Eu venho de terras distantes, em busca de riquezas e poder. A Coroa tem planos para esse Novo Mundo."
+            <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <!-- Linha 1 com uma leve curvatura para parecer desenhada à mão -->
+                <path class="x-line" d="M20,20 Q50,25 80,80"
+                  stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                <!-- Linha 2 com uma leve curvatura -->
+                <path class="x-line" d="M80,20 Q50,15 20,80"
+                  stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+              </svg>
+        </button>
     </div>
     </div>
 

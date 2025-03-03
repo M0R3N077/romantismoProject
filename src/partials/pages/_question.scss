@@ -1,86 +1,174 @@
 #bodyQuestionOne {
-   background-color: black;
-   color: white;
-   display: flex;
-   justify-content: center;
-   font-family: "Poppins";
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
 }
 
 #bg-video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 80vw;
-    height: 100vh;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    object-fit: cover;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  object-fit: cover;
 }
 
 .question-container {
     display: flex;
     flex-direction: column;
-    width: 61vw;
+    min-width: -200px; /* Começa fechada */
+    max-width: 61vw; /* Tamanho final */
     padding: 100px;
     align-items: center;
+    justify-content: center;
     text-align: center;
+    overflow: hidden; /* Oculta conteúdo fora da div */
+    white-space: nowrap; /* Evita que o texto quebre enquanto a div se expande */
+    // animation: expandirPergaminho 9s ease-in; /* Animação de abertura */
+    // background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, black 30%, black 70%, rgba(0, 0, 0, 0) 100%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent; 
+    opacity: 0;
 }
 
-.question-container p{
-    font-size: 30px;
-    font-family: "Machinery";
-    letter-spacing: 5px;
-    
+  @keyframes expandirPergaminho {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.question{
-    margin-top: -20px;
+.question-container.show-question {
+    display: flex; /* Torna visível */
+    opacity: 1; /* Animação de fade-in */
+    animation: expandirPergaminho 9s ease;
+  }  
+
+.question-container p {
+  font-size: 25px;
+  font-family: "Machinery";
+  letter-spacing: 5px;
+  color: black;
 }
 
-.choices-um{
-    display: flex;
-    max-width: 50vw;
-    margin-right: 15px;
-    flex-direction: row;
-    gap: 80px;
-    margin-top: 60px;
-    margin-bottom: 30px;
+.question {
+  margin-top: 10px;
+  min-width: 750px;
+  white-space: wrap; /* Evita que o texto quebre enquanto a div se expande */
 }
 
-.choices-dois{
-    display: flex;
-    max-width: 50vw;
-    margin-right: 15px;
-    flex-direction: row;
-    gap: 80px;
+.next-button-modal, .next-button-modal-content{
+  position: fixed;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* From Uiverse.io by barisdogansutcu */ 
+.choices-um {
+  display: flex;
+  max-width: 50vw;
+  margin-right: 15px;
+  flex-direction: row;
+  gap: 80px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  white-space: nowrap; /* Evita que o texto quebre enquanto a div se expande */
+
+}
+
+.choices-dois {
+  display: flex;
+  max-width: 50vw;
+  margin-right: 15px;
+  flex-direction: row;
+  gap: 80px;
+  white-space: nowrap; /* Evita que o texto quebre enquanto a div se expande */
+
+}
+
+/* From Uiverse.io by barisdogansutcu */
 .choice {
-    font-family: inherit;
+  all: unset;
+  font-family: "Machinery";
+  color: black;
+  // background-color: blue;
+  margin-top: 50px;
+  min-width: 300px;
+  white-space: wrap; /* Evita que o texto quebre enquanto a div se expande */
+}
+
+.choice:active {
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #292929,
+    inset -2px -2px #ffffff, inset 2px 2px rgb(158, 158, 158);
+}
+
+.choice {
+    position: relative;
+    overflow: hidden;
+    font-family: "Machinery";
+    color: black;
+    margin-top: 50px;
+    background: none;
     border: none;
-    outline: 1px dotted rgb(37, 37, 37);
-    outline-offset: -4px;
     cursor: pointer;
-    background: hsl(0deg 0% 75%);
-    box-shadow:
-      inset -1px -1px #292929,
-      inset 1px 1px #fff,
-      inset -2px -2px rgb(158, 158, 158),
-      inset 2px 2px #ffffff;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 5px 30px;
-    height: 120px;
-    width: 420px;
+    padding: 15px;
   }
   
-  .choice:active {
-    box-shadow:
-      inset -1px -1px #fff,
-      inset 1px 1px #292929,
-      inset -2px -2px #ffffff,
-      inset 2px 2px rgb(158, 158, 158);
+  /* Ajuste para que o X fique maior que o contêiner */
+  .x-animation {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    pointer-events: none;
+    opacity: 0;  /* Inicialmente invisível */
   }
+  
+  /* Configuração inicial para os traços do X */
+  .x-animation .x-line {
+    stroke-dasharray: 90;
+    stroke-dashoffset: 90;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.3s ease-out;
+  }
+  
+  /* Primeira linha: sem delay */
+  .x-animation .x-line:nth-child(1) {
+    transition-delay: 0s;
+  }
+  
+  /* Segunda linha: inicia 0.3s depois */
+  .x-animation .x-line:nth-child(2) {
+    transition-delay: 0.3s;
+  }
+  
+  /* Quando passa o mouse, o X aparece instantaneamente */
+  .choice:hover .x-animation {
+    opacity: 1;
+    transition: none; /* Remove a transição ao aparecer */
+  }
+  
+  /* Desenha o X */
+  .choice:hover .x-animation .x-line {
+    stroke-dashoffset: 0;
+  }
+  
+  /* Quando o mouse sai, o X desaparece suavemente */
+  .choice:not(:hover) .x-animation {
+    transition: opacity 0.4s ease-out; /* Aplica a transição apenas na saída */
+    opacity: 0;
+  }
+
+  
+  
   

@@ -8,12 +8,30 @@
 
 body {
   min-height: 100dvh;
+  cursor: url("assets/cursor/feather.cur") 16 16, auto;
 }
 
 @font-face {
   font-family: "Machinery";
   src: url(./assets/fonts/MachineryScript_PERSONAL_USE_ONLY.otf);
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff9800, #ff5722);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff5722, #d84315);
+}
+
 #princess {
   width: 350px;
 }
@@ -497,7 +515,8 @@ body {
   font-weight: 400;
   color: white;
 }
-.modal-content img, .modal-content div {
+.modal-content img,
+.modal-content div {
   flex: 1;
 }
 .modal-content div {
@@ -521,15 +540,187 @@ body {
     flex-direction: column;
     justify-content: start;
   }
-  .modal-content img, .modal-content div {
+  .modal-content img,
+  .modal-content div {
     flex: 0;
   }
   #modal-image {
     width: 100%;
   }
 }
+.services {
+  font-family: Poppins, sans-serif;
+  background: #000000;
+  color: color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.services-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  color: white;
+}
+
+.services-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+  color: white;
+}
+
+.participants {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 0 44px 34px 44px;
+  font-family: Poppins, sans-serif;
+}
+
+#teacher-content {
+  margin-top: 50px;
+}
+
+.sesi-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sesi-logo img {
+  width: 250px;
+  margin-top: -20px;
+}
+
+.copy {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.navbar-social-media {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.instagram a {
+  color: #000000;
+  margin-right: 4rem;
+  transition: color 0.3s ease;
+}
+
+.instagram a:hover {
+  color: #767376;
+}
+
+.twitter-x a {
+  color: #000000;
+  margin-right: 4rem;
+  transition: color 0.3s ease;
+}
+
+.twitter-x a:hover {
+  color: #767376;
+}
+
+.youtube a {
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.youtube a:hover {
+  color: #767376;
+}
+
+.end {
+  margin-top: 0.75rem;
+  font-size: large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 1rem;
+}
+
+svg {
+  height: 1.5rem;
+  width: auto;
+}
+
+footer {
+  background: linear-gradient(to bottom, #000000, #ffffff);
+  color: #000000;
+  font-family: "Poppins";
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .participants {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.participant {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+.participant img {
+  width: 100%;
+  max-width: 424px;
+  height: 270px;
+  transition: 0.3s;
+}
+
+.participant img:hover {
+  scale: 1.2;
+  z-index: 1;
+}
+
+.participant-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+  background-color: white;
+  z-index: 99;
+}
+
+.participant-info button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 0;
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  .participants {
+    flex-direction: column;
+  }
+  .participant img {
+    max-width: 740px;
+  }
+}
 .bodyGame {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -537,22 +728,60 @@ body {
   background: url("../../../assets/backgrounds/fundoMandeira.png") no-repeat center center/cover;
 }
 
+#black-screen {
+  min-height: 100dvh;
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  z-index: 99;
+  background-color: black;
+}
+
+#black-screen p {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "medievalsharp";
+  max-width: 90%;
+  margin: 0 auto;
+  line-height: 1.5;
+  white-space: normal;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
-  } /* Posição inicial */
+  }
   25% {
     background-position: 50% 50%;
-  } /* Posição intermediária */
+  }
   50% {
     background-position: 100% 50%;
-  } /* Posição centralizada */
+  }
   75% {
     background-position: 50% 50%;
-  } /* Outra posição intermediária */
+  }
   100% {
     background-position: 0% 50%;
-  } /* Volta à posição inicial */
+  }
 }
 .audio-controls {
   position: absolute;
@@ -585,6 +814,11 @@ body {
   height: 574px;
 }
 
+@media (max-width: 768px) {
+  #gameCavas {
+    width: 100%;
+  }
+}
 .character {
   background: url("../../../assets/characters/personagemPrincipal.png") no-repeat center/cover;
   position: absolute;
@@ -607,14 +841,15 @@ body {
 }
 
 .titleGame {
+  text-align: center;
   font-family: "Hanalei Fill";
   letter-spacing: 7px;
   margin-top: 40px;
-  font-size: 40px;
+  font-size: 2vw;
   display: inline-block;
   position: relative;
-  color: red; /* Define a cor do texto como vermelho */
-  text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white; /* Cria a borda branca ao redor */
+  color: red;
+  text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;
 }
 
 .titleGame span {
@@ -765,6 +1000,7 @@ body {
   color: white;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family: "Poppins";
 }
 
@@ -783,20 +1019,51 @@ body {
 .question-container {
   display: flex;
   flex-direction: column;
-  width: 61vw;
+  min-width: -200px; /* Começa fechada */
+  max-width: 61vw; /* Tamanho final */
   padding: 100px;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  overflow: hidden; /* Oculta conteúdo fora da div */
+  white-space: nowrap; /* Evita que o texto quebre enquanto a div se expande */
+  opacity: 0;
+}
+
+@keyframes expandirPergaminho {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.question-container.show-question {
+  display: flex; /* Torna visível */
+  opacity: 1; /* Animação de fade-in */
+  animation: expandirPergaminho 9s ease;
 }
 
 .question-container p {
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Machinery";
   letter-spacing: 5px;
+  color: black;
 }
 
 .question {
-  margin-top: -20px;
+  margin-top: 10px;
+  min-width: 750px;
+  white-space: wrap; /* Evita que o texto quebre enquanto a div se expande */
+}
+
+.next-button-modal, .next-button-modal-content {
+  position: fixed;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .choices-um {
@@ -807,6 +1074,7 @@ body {
   gap: 80px;
   margin-top: 60px;
   margin-bottom: 30px;
+  white-space: nowrap; /* Evita que o texto quebre enquanto a div se expande */
 }
 
 .choices-dois {
@@ -815,25 +1083,99 @@ body {
   margin-right: 15px;
   flex-direction: row;
   gap: 80px;
+  white-space: nowrap; /* Evita que o texto quebre enquanto a div se expande */
 }
 
 /* From Uiverse.io by barisdogansutcu */
 .choice {
-  font-family: inherit;
-  border: none;
-  outline: 1px dotted rgb(37, 37, 37);
-  outline-offset: -4px;
-  cursor: pointer;
-  background: hsl(0, 0%, 75%);
-  box-shadow: inset -1px -1px #292929, inset 1px 1px #fff, inset -2px -2px rgb(158, 158, 158), inset 2px 2px #ffffff;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 5px 30px;
-  height: 120px;
-  width: 420px;
+  all: unset;
+  font-family: "Machinery";
+  color: black;
+  margin-top: 50px;
+  min-width: 300px;
+  white-space: wrap; /* Evita que o texto quebre enquanto a div se expande */
 }
 
 .choice:active {
   box-shadow: inset -1px -1px #fff, inset 1px 1px #292929, inset -2px -2px #ffffff, inset 2px 2px rgb(158, 158, 158);
+}
+
+.choice {
+  position: relative;
+  overflow: hidden;
+  font-family: "Machinery";
+  color: black;
+  margin-top: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+}
+
+/* Ajuste para que o X fique maior que o contêiner */
+.x-animation {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  pointer-events: none;
+  opacity: 0; /* Inicialmente invisível */
+}
+
+/* Configuração inicial para os traços do X */
+.x-animation .x-line {
+  stroke-dasharray: 90;
+  stroke-dashoffset: 90;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease-out;
+}
+
+/* Primeira linha: sem delay */
+.x-animation .x-line:nth-child(1) {
+  transition-delay: 0s;
+}
+
+/* Segunda linha: inicia 0.3s depois */
+.x-animation .x-line:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+/* Quando passa o mouse, o X aparece instantaneamente */
+.choice:hover .x-animation {
+  opacity: 1;
+  transition: none; /* Remove a transição ao aparecer */
+}
+
+/* Desenha o X */
+.choice:hover .x-animation .x-line {
+  stroke-dashoffset: 0;
+}
+
+/* Quando o mouse sai, o X desaparece suavemente */
+.choice:not(:hover) .x-animation {
+  transition: opacity 0.4s ease-out; /* Aplica a transição apenas na saída */
+  opacity: 0;
+}
+
+#final-body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.final-container {
+  color: white;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-family: "medievalsharp";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100dvh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  gap: 1rem;
 }/*# sourceMappingURL=style.css.map */

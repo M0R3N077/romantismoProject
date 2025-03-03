@@ -7,17 +7,57 @@
     <link rel="stylesheet" href="style.css">
     <script type="module" src="./src/js/questions.js" defer></script>
 </head>
-<body>
-    <div class="question-container">
-        <p>O Chamado da Aventura Você segue viagem, mas se depara com um momento decisivo. Uma situação inesperada surge diante de você:  </p>
-        <p><strong>"Ao caminhar por uma trilha, você ouve um grito distante. Quando se aproxima, vê uma pessoa em perigo. O que você faz?" 
-        </strong></p>
-        <img src="" alt="Imagem ilustrativa">
+<body id="bodyQuestionOne">
+    <video autoplay muted id="bg-video">
+        <source src="./assets/backgrounds/videoQuestion.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos em HTML5.
+    </video>
 
-        <button class="choice" data-choice="indianista">"Salto imediatamente para ajudar! A vida é sagrada e a floresta protege aqueles que a respeitam."  </button>
-        <button class="choice" data-choice="urbanista">"Antes de agir, analiso a situação. Será que vale a pena me envolver? Talvez a pessoa possa me retribuir de alguma forma."  </button>
-        <button class="choice" data-choice="regionalista">"Vejo que é um trabalhador como eu, então corro para ajudá-lo. Na terra, somos todos irmãos." </button>
-        <button class="choice" data-choice="historico">"Observo de longe. Interferir pode ser arriscado, e um líder precisa agir com estratégia." </button>
+    <div class="question-container">
+        <p class="question">O Chamado da Aventura Você segue viagem, mas se depara com um momento decisivo. Uma <br> situação inesperada surge diante de você:</p>
+        <p><strong>"Ao caminhar por uma trilha, você ouve um <br> grito distante. Quando se aproxima,  vê uma pessoa <br> em perigo. O que você faz?"</strong></p>
+
+        <div class="choices-um" style="margin-top: 10px; margin-bottom: 20px;">
+            <button class="choice" data-choice="indianista">
+                "Salto imediatamente para ajudar! A vida é sagrada e a floresta protege aqueles que a respeitam."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <path class="x-line" d="M20,20 Q50,25 80,80"
+                    stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                  <path class="x-line" d="M80,20 Q50,15 20,80"
+                    stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+        
+            <button class="choice" data-choice="urbanista">
+                "Antes de agir, analiso a situação. Será que vale a pena me envolver? Talvez a pessoa possa me retribuir de alguma forma."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path class="x-line" d="M20,20 Q50,25 80,80"
+                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <path class="x-line" d="M80,20 Q50,15 20,80"
+                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+        <div class="choices-dois">
+            <button class="choice" data-choice="regionalista">
+                "Vejo que é um trabalhador como eu, então corro para ajudá-lo. Na terra, somos todos irmãos."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path class="x-line" d="M20,20 Q50,25 80,80"
+                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <path class="x-line" d="M80,20 Q50,15 20,80"
+                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+            <button class="choice" data-choice="historico">
+                "Observo de longe. Interferir pode ser arriscado, e um líder precisa agir com estratégia."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path class="x-line" d="M20,20 Q50,25 80,80"
+                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <path class="x-line" d="M80,20 Q50,15 20,80"
+                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
     </div>
 
     <div id="next-button-modal" class="next-button-modal">

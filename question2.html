@@ -7,16 +7,57 @@
     <link rel="stylesheet" href="style.css">
     <script type="module" src="./src/js/questions.js" defer></script>
 </head>
-<body>
-    <div class="question-container">
-        <p>Após sua resposta, você continua sua jornada e encontra uma cena inesperada: um grupo de homens discute fervorosamente sobre o futuro do Brasil. Você se aproxima e ouve um deles perguntar: </p>
-        <p><strong>"O que você considera mais importante para o futuro deste país?" </strong></p>
-        <img src="" alt="Imagem ilustrativa">
+<body id="bodyQuestionOne">
+    <video autoplay muted id="bg-video">
+        <source src="./assets/backgrounds/videoQuestion.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos em HTML5.
+    </video>
 
-        <button class="choice" data-choice="indianista">"A tradição dos povos nativos deve ser preservada. A terra não nos pertence, somos apenas seus guardiões." </button>
-        <button class="choice" data-choice="urbanista">"A sociedade precisa se modernizar, a cidade cresce e com ela, novas ideias e desafios." </button>
-        <button class="choice" data-choice="regionalista">""A vida no campo e a luta do povo simples são a verdadeira identidade deste país." </button>
-        <button class="choice" data-choice="historico">"O progresso exige ordem e estratégia. A Coroa precisa consolidar seu domínio sobre esta terra."</button>
+    <div class="question-container">
+        <p class="question" style="font-size: 20px">Após sua resposta, você continua sua jornada e encontra uma cena inesperada: um grupo de homens discute fervorosamente sobre o futuro do Brasil. Você se aproxima e ouve um deles perguntar:</p>
+        <p style="font-size: 20px"><strong>"O que você considera mais importante para o futuro <br> deste país?"</strong></p>
+
+        <div class="choices-um" style="margin-top: 30px">
+            <button class="choice" data-choice="indianista">
+                "A tradição dos povos nativos deve ser preservada. A terra não nos pertence, somos apenas seus guardiões."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <path class="x-line" d="M20,20 Q50,25 80,80"
+                    stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                  <path class="x-line" d="M80,20 Q50,15 20,80"
+                    stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+        
+            <button class="choice" data-choice="urbanista">
+                "A sociedade precisa se modernizar, a cidade cresce e com ela, novas ideias e desafios."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path class="x-line" d="M20,20 Q50,25 80,80"
+                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <path class="x-line" d="M80,20 Q50,15 20,80"
+                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+        <div class="choices-dois">
+            <button class="choice" data-choice="regionalista">
+                "A vida no campo e a luta do povo simples são a verdadeira identidade deste país."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path class="x-line" d="M20,20 Q50,25 80,80"
+                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <path class="x-line" d="M80,20 Q50,15 20,80"
+                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+            <button class="choice" data-choice="historico">
+                "O progresso exige ordem e estratégia. A Coroa precisa consolidar seu domínio sobre esta terra."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path class="x-line" d="M20,20 Q50,25 80,80"
+                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <path class="x-line" d="M80,20 Q50,15 20,80"
+                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
     </div>
 
     <div id="next-button-modal" class="next-button-modal">

@@ -7,7 +7,8 @@
 }
 
 body{
-    min-height: 100dvh;
+    min-height: 100dvh;  
+    cursor: url("assets/cursor/feather.cur") 16 16, auto;
 }
 
 @font-face {
@@ -18,6 +19,7 @@ body{
 @import "src/partials/pages/index";
 @import "src/partials/pages/game";
 @import "src/partials/pages/question";
+@import "src/partials/pages/final";
 
 
 

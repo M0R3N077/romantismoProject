@@ -27,6 +27,9 @@ window.onload = function() {
 
 newGameBtn.addEventListener("click", () => {
     localStorage.removeItem("progress");
+    localStorage.removeItem("score");
+    localStorage.removeItem("drawnIndices");
+    localStorage.removeItem("animationPlayed");
     window.location.href = '../../game.html';
 })
 
