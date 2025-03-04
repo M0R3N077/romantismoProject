@@ -27,7 +27,7 @@ const chooseOption = (choice, btn) => {
         question2: {
             indianista: "url('../../../assets/imgsModal/indianista/indianista2.jpg')",
             urbanista: "url('../../../assets/imgsModal/urbanista/urbanista2.jpg')",
-            regionalista: "url('../../../assets/imgsModal/regionalista/indianista2.jpg')",
+            regionalista: "url('../../../assets/imgsModal/regionalista/regionalista2.jpg')",
             historico: "url('../../../assets/imgsModal/historico/historico2.jpg')"
         },
         question3: {
