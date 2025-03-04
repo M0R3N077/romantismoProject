@@ -7,23 +7,63 @@
     <link rel="stylesheet" href="style.css">
     <script type="module" src="./src/js/questions.js" defer></script>
 </head>
-<body>
-    <div class="question-container">
-        <p>O Legado que Você Deixará Depois de todas as suas escolhas, você se pergunta sobre o que deixará para o futuro. No final de sua jornada, um velho sábio lhe faz a última pergunta:  </p>
-        <p><strong>"O que você quer que seja lembrado sobre sua vida?"</strong></p>
-        <img src="" alt="Imagem ilustrativa">
+<body id="bodyQuestionOne">
+    <video autoplay id="bg-video">
+        <source src="./assets/backgrounds/videoQuestion.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos em HTML5.
+    </video>
 
-        <button class="choice" data-choice="indianista">"Que lutei pela natureza e pelos meus ancestrais. Que meu espírito corra livre nas florestas para sempre."  </button>
-        <button class="choice" data-choice="urbanista">"Que meu nome seja citado nos salões e livros da cidade. Que eu tenha moldado o futuro com palavras e influência." </button>
-        <button class="choice" data-choice="regionalista">"Que o povo se lembre de mim como alguém que viveu com dignidade, trabalhando pela terra." </button>
-        <button class="choice" data-choice="historico">"Que eu tenha deixado um império forte e indestrutível, e que minha linhagem domine por gerações."</button>
+    <div class="question-container">
+        <p class="question">Depois de todas as suas escolhas, você se pergunta sobre o que deixará para o futuro. No final de sua jornada, um velho sábio lhe faz a última pergunta:</p>
+        <p><strong>"O que você quer que seja lembrado sobre sua vida?"</strong></p>
+
+        <div class="choices-um">
+            <button class="choice" data-choice="indianista">
+                "Que lutei pela natureza e pelos meus ancestrais. Que meu espírito corra livre nas florestas para sempre."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path class="x-line" d="M20,20 Q50,25 80,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <path class="x-line" d="M80,20 Q50,15 20,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <button class="choice" data-choice="urbanista">
+                "Que meu nome seja citado nos salões e livros da cidade. Que eu tenha moldado o futuro com palavras e influência."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path class="x-line" d="M20,20 Q50,25 80,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <path class="x-line" d="M80,20 Q50,15 20,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="choices-dois">
+            <button class="choice" data-choice="regionalista">
+                "Que o povo se lembre de mim como alguém que viveu com dignidade, trabalhando pela terra."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path class="x-line" d="M20,20 Q50,25 80,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <path class="x-line" d="M80,20 Q50,15 20,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <button class="choice" data-choice="historico">
+                "Que eu tenha deixado um império forte e indestrutível, e que minha linhagem domine por gerações."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path class="x-line" d="M20,20 Q50,25 80,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <path class="x-line" d="M80,20 Q50,15 20,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
     </div>
 
     <div id="next-button-modal" class="next-button-modal">
         <div class="next-button-modal-content">
+            <h1 id="modal-title"></h1>
             <p id="result-text"></p>
-            <button id="next-button" style="display: none;">Avançar</button>
-            <button id="finish-button" style="display: none;">Finalizar</button>
+            <button id="finish-button" class="btn-class-name">
+                <span>Finalizar</span>
+                <svg viewBox="0 0 320 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
+                </svg>
+            </button>
         </div>
     </div>
 </body>

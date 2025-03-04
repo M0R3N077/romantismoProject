@@ -7,23 +7,65 @@
     <link rel="stylesheet" href="style.css">
     <script type="module" src="./src/js/questions.js" defer></script>
 </head>
-<body>
-    <div class="question-container">
-        <p>O Amor e o Destino O destino o coloca diante de um dilema. Você conhece alguém especial, mas o amor nunca é simples no século XIX. Seu coração está em conflito, pois sua posição social e os valores da época tornam tudo mais complicado.  </p>
-        <p><strong>"O que você faria por amor?"</strong></p>
-        <img src="" alt="Imagem ilustrativa">
+<body id="bodyQuestionOne">
+    <video autoplay id="bg-video">
+        <source src="./assets/backgrounds/videoQuestion.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos em HTML5.
+    </video>
 
-        <button class="choice" data-choice="indianista">"O amor é livre como o vento. Luto contra qualquer tradição que tente me separar de quem eu amo."  </button>
-        <button class="choice" data-choice="urbanista">"O amor é belo, mas também um jogo social. Preciso garantir que minha escolha não destrua minha posição."   </button>
-        <button class="choice" data-choice="regionalista">"O coração fala mais alto. Mesmo que o mundo se oponha, sigo meu caminho ao lado da pessoa que escolhi."</button>
-        <button class="choice" data-choice="historico">"O amor é uma fraqueza. Alianças estratégicas moldam a história, e sentimentos não podem interferir no poder." </button>
+    <div class="question-container">
+        <p class="question">O destino o coloca diante de um dilema. Você conhece alguém especial, mas o amor nunca é simples no século XIX. Seu coração está em conflito, pois sua posição social e os valores da época tornam tudo mais complicado.</p>
+        <p><strong>"O que você faria por amor?"</strong></p>
+
+        <div class="choices-um">
+            <button class="choice" data-choice="indianista">
+                "O amor é livre como o vento. Luto contra qualquer tradição que tente me separar de quem eu amo."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path class="x-line" d="M20,20 Q50,25 80,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <path class="x-line" d="M80,20 Q50,15 20,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <button class="choice" data-choice="urbanista">
+                "O amor é belo, mas também um jogo social. Preciso garantir que minha escolha não destrua minha posição."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path class="x-line" d="M20,20 Q50,25 80,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <path class="x-line" d="M80,20 Q50,15 20,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="choices-dois">
+            <button class="choice" data-choice="regionalista">
+                "O coração fala mais alto. Mesmo que o mundo se oponha, sigo meu caminho ao lado da pessoa que escolhi."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path class="x-line" d="M20,20 Q50,25 80,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <path class="x-line" d="M80,20 Q50,15 20,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <button class="choice" data-choice="historico">
+                "O amor é uma fraqueza. Alianças estratégicas moldam a história, e sentimentos não podem interferir no poder."
+                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path class="x-line" d="M20,20 Q50,25 80,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <path class="x-line" d="M80,20 Q50,15 20,80" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
     </div>
 
     <div id="next-button-modal" class="next-button-modal">
         <div class="next-button-modal-content">
+            <h1 id="modal-title"></h1>
             <p id="result-text"></p>
-            <button id="next-button" style="display: none;">Avançar</button>
+            <button id="next-button" class="btn-class-name">
+              <span>Avançar</span>
+              <svg viewBox="0 0 320 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
+              </svg>
+          </button>
         </div>
     </div>
 </body>
 </html>
+

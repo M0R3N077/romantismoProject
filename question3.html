@@ -8,7 +8,7 @@
     <script type="module" src="./src/js/questions.js" defer></script>
 </head>
 <body id="bodyQuestionOne">
-    <video autoplay muted id="bg-video">
+    <video autoplay id="bg-video">
         <source src="./assets/backgrounds/videoQuestion.mp4" type="video/mp4">
         Seu navegador não suporta vídeos em HTML5.
     </video>
@@ -62,8 +62,14 @@
 
     <div id="next-button-modal" class="next-button-modal">
         <div class="next-button-modal-content">
+            <h1 id="modal-title"></h1>
             <p id="result-text"></p>
-            <button id="next-button" style="display: none;">Avançar</button>
+            <button id="next-button" class="btn-class-name">
+              <span>Avançar</span>
+              <svg viewBox="0 0 320 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
+              </svg>
+          </button>
         </div>
     </div>
 </body>

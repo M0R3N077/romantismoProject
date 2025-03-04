@@ -376,6 +376,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: center;
   border-radius: 5px;
   backdrop-filter: blur(30px);
@@ -445,7 +446,7 @@
   border-radius: 5px;
   font-size: x-large;
   color: #eee;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .slider-wrapper .swiper-slide-button:hover {
@@ -718,6 +719,29 @@ gap: 10px;
 
   .participant img {
     max-width: 740px;
+  }
+}
+
+@media (max-width: 330px) {
+  .intro-content {
+    h1 {
+      font-size: 50px;
+    }
+  }
+
+  #princess {
+    width: 300px;
+  }
+
+  .main-buttons {
+    width: 100px;
+    gap: 30px;
+  }
+
+  .participants {
+   div.participant{
+    width: 200px;
+   }
   }
 }
 

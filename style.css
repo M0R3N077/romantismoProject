@@ -388,6 +388,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: center;
   border-radius: 5px;
   -webkit-backdrop-filter: blur(30px);
@@ -460,7 +461,7 @@ body {
   border-radius: 5px;
   font-size: x-large;
   color: #eee;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .slider-wrapper .swiper-slide-button:hover {
@@ -717,6 +718,21 @@ footer {
   }
   .participant img {
     max-width: 740px;
+  }
+}
+@media (max-width: 330px) {
+  .intro-content h1 {
+    font-size: 50px;
+  }
+  #princess {
+    width: 300px;
+  }
+  .main-buttons {
+    width: 100px;
+    gap: 30px;
+  }
+  .participants div.participant {
+    width: 200px;
   }
 }
 .bodyGame {
@@ -1008,7 +1024,7 @@ footer {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 80vw;
+  width: 100vw;
   height: 100vh;
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -1021,7 +1037,7 @@ footer {
   flex-direction: column;
   min-width: -200px; /* Começa fechada */
   max-width: 61vw; /* Tamanho final */
-  padding: 100px;
+  padding: 0 100px;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -1052,20 +1068,68 @@ footer {
 }
 
 .question {
-  margin-top: 10px;
+  margin-top: 0px;
   min-width: 750px;
   white-space: wrap; /* Evita que o texto quebre enquanto a div se expande */
 }
 
-.next-button-modal, .next-button-modal-content {
+.next-button-modal {
+  display: none;
   position: fixed;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: forwards 0.5s modal;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
   justify-content: center;
   align-items: center;
 }
 
+#next-button-modal {
+  background-size: cover; /* Faz a imagem cobrir todo o elemento */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  width: 100%; /* Ajusta à largura do contêiner */
+  height: 100vh; /* Faz com que ocupe toda a altura da tela */
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    top: 0%;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+  }
+}
+.next-button-modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: rgba(3, 3, 3, 0.655);
+  padding: 1.5rem;
+  border-radius: 15px;
+  overflow-y: auto;
+  width: 55%;
+  height: 70%;
+  gap: 2rem;
+  font-family: "Poppins";
+  font-weight: 400;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .next-button-modal-content {
+    width: 80%;
+    height: 80%;
+  }
+}
 .choices-um {
   display: flex;
   max-width: 50vw;
@@ -1178,4 +1242,38 @@ footer {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   gap: 1rem;
+}
+
+.final-card-list .final-card-item {
+  height: 300px;
+  color: rgb(255, 255, 255);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 5px;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  background: rgba(159, 158, 158, 0.2);
+  box-shadow: 0px 0px 7px rgb(188, 187, 187);
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.244);
+  font-family: "medievalsharp";
+  font-weight: 400;
+  max-width: 220px;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  width: 100px;
+}
+
+.final-card-list .final-card-item img {
+  max-width: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

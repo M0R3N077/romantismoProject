@@ -26,11 +26,17 @@ window.onload = function() {
 });
 
 newGameBtn.addEventListener("click", () => {
-    localStorage.removeItem("progress");
-    localStorage.removeItem("score");
-    localStorage.removeItem("drawnIndices");
-    localStorage.removeItem("animationPlayed");
-    window.location.href = '../../game.html';
+
+    if (window.innerWidth >= 1024) {
+        localStorage.removeItem("progress");
+        localStorage.removeItem("score");
+        localStorage.removeItem("drawnIndices");
+        localStorage.removeItem("animationPlayed");
+        window.location.href = '../../game.html';
+    } else {
+        alert("Infelizmente, nosso jogo só funciona para computadores!");
+    }
+
 })
 
 continueBtn.addEventListener("click", () => {

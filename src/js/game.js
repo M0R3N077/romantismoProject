@@ -2,19 +2,27 @@ const textElement = document.querySelector("#black-screen p");
 const text = textElement.textContent;
 textElement.textContent = ""; 
 
+const typingSound = new Audio("../../../assets/sounds/typing.mp3"); // Som de digitação
+typingSound.volume = 0.4; // Ajusta o volume
+typingSound.loop = true;
+
 let index = 0;
 
 const typeEffect = () => {
+  if (index === 0 && !localStorage.getItem("animationPlayed")) {
+    typingSound.play(); // Inicia o som apenas na primeira vez
+  }
+
   if (index < text.length) {
     textElement.textContent += text[index];
     index++;
-    setTimeout(typeEffect, 50);
+    setTimeout(typeEffect, 50); // Ajuste esse valor para alterar a velocidade da digitação
   } else {
-    textElement.style.borderRight = "none"; 
+    textElement.style.borderRight = "none";
+    typingSound.pause(); // Para o som quando a digitação terminar
+    typingSound.currentTime = 0; // Reinicia o som para o próximo uso
   }
-}
-
-setTimeout(typeEffect, 500); 
+};
 
 const blackScreen = document.querySelector("#black-screen");
 
@@ -25,10 +33,14 @@ if (!localStorage.getItem("animationPlayed")) {
     document.body.style.overflow = "";
     blackScreen.remove();
     localStorage.setItem("animationPlayed", "true");
-  }, 25000);
+  }, 27000);
+
+  setTimeout(typeEffect, 500); // Só inicia a digitação se o black-screen for exibido
 } else {
   blackScreen.remove();
 }
+
+
 
 const progress = JSON.parse(localStorage.getItem("progress")) || {
   currentQuestion: 1,

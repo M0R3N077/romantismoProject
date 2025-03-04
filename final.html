@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="./src/js/final.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
+    <!-- SWIPER -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css"
+    />
+    <!-- SCRIPTS -->
+    <script src="./src/js/final.js" defer></script>
     <title>Final</title>
   </head>
   <body id="final-body">
@@ -44,5 +54,33 @@
         </button>
       </div>
     </div>
+    <!-- CARDS SLIDER -->
+    <section class="container swiper">
+      <div class="slider-wrapper">
+        <div class="final-card-list swiper-wrapper">
+          <div class="final-card-item swiper-slide">
+            <img src="" />
+          </div>
+          <div class="final-card-item swiper-slide">
+            <img src="" />
+          </div>
+          <div class="final-card-item swiper-slide">
+            <img src="" />
+          </div>
+          <div class="final-card-item swiper-slide">
+            <img src="" />
+          </div>
+          <div class="final-card-item swiper-slide">
+            <img src="" />
+          </div>
+          <div class="final-card-item swiper-slide">
+            <img src="" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <button class="swiper-slide-button swiper-button-prev"></button>
+        <button class="swiper-slide-button swiper-button-next"></button>
+      </div>
+    </section>
   </body>
 </html>

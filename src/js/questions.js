@@ -14,16 +14,65 @@ const chooseOption = (choice, btn) => {
     localStorage.setItem("score", JSON.stringify(score));
 
     document.getElementById("result-text").innerText = messages[currentPage][choice] || "Escolha inválida!";
-    
+
+    document.getElementById("modal-title").innerText = `Você escolheu a opção "${choice}"`;
+
+    const backgroundImages = {
+        question1: {
+            indianista: "url('../../../assets/imgsModal/indianista/indianista1.jpg')",
+            urbanista: "url('../../../assets/imgsModal/urbanista/urbanista1.jpg')",
+            regionalista: "url('../../../assets/imgsModal/regionalista/regionalista1.jpg')",
+            historico: "url('../../../assets/imgsModal/historico/historico1.jpg')"
+        },
+        question2: {
+            indianista: "url('../../../assets/imgsModal/indianista/indianista2.jpg')",
+            urbanista: "url('../../../assets/imgsModal/urbanista/urbanista2.jpg')",
+            regionalista: "url('../../../assets/imgsModal/regionalista/indianista2.jpg')",
+            historico: "url('../../../assets/imgsModal/historico/historico2.jpg')"
+        },
+        question3: {
+            indianista: "url('../../../assets/imgsModal/indianista/indianista3.jpg')",
+            urbanista: "url('../../../assets/imgsModal/urbanista/urbanista3.jpg')",
+            regionalista: "url('../../../assets/imgsModal/regionalista/regionalista3.jpg')",
+            historico: "url('../../../assets/imgsModal/historico/historico3.jpg')"
+        },
+        question4: {
+            indianista: "url('../../../assets/imgsModal/indianista/indianista4.jpg')",
+            urbanista: "url('../../../assets/imgsModal/urbanista/urbanista4.jpg')",
+            regionalista: "url('../../../assets/imgsModal/regionalista/regionalista4.jpg')",
+            historico: "url('../../../assets/imgsModal/historico/historico4.jpg')"
+        },
+        question5: {
+            indianista: "url('../../../assets/imgsModal/indianista/indianista5.jpg')",
+            urbanista: "url('../../../assets/imgsModal/urbanista/urbanista5.jpg')",
+            regionalista: "url('../../../assets/imgsModal/regionalista/regionalista5.jpg')",
+            historico: "url('../../../assets/imgsModal/historico/historico5.jpg')"
+        },
+        question6: {
+            indianista: "url('../../../assets/imgsModal/indianista/indianista6.jpg')",
+            urbanista: "url('../../../assets/imgsModal/urbanista/urbanista6.jpg')",
+            regionalista: "url('../../../assets/imgsModal/regionalista/regionalista6.jpg')",
+            historico: "url('../../../assets/imgsModal/historico/historico6.jpg')"
+        },
+        question7: {
+            indianista: "url('../../../assets/imgsModal/indianista/indianista7.jpg')",
+            urbanista: "url('../../../assets/imgsModal/urbanista/urbanista7.jpg')",
+            regionalista: "url('../../../assets/imgsModal/regionalista/regionalista7.jpg')",
+            historico: "url('../../../assets/imgsModal/historico/historico7.jpg')"
+        }
+    };
+
+    document.getElementById("next-button-modal").style.backgroundImage = backgroundImages[currentPage][choice] || "none";
+
     const progress = JSON.parse(localStorage.getItem("progress")) || { currentQuestion: 1 };
     const totalQuestions = 7;
 
     if (progress.currentQuestion === totalQuestions) {
-        document.getElementById("next-button").style.display = "none";
+        document.getElementById("next-button-modal").style.display = "flex";
         document.getElementById("finish-button").style.display = "block"; 
         displayFinalResult();
     } else {
-        document.getElementById("next-button").style.display = "block";
+        document.getElementById("next-button-modal").style.display = "flex";
         document.getElementById("finish-button").style.display = "none";
     }
 
@@ -58,50 +107,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-//--------------------------------------------------
-// Obtém elementos
-//--------------------------------------------------
-// Obtém elementos
-//--------------------------------------------------
-// Obtém elementos
-//--------------------------------------------------
-// Obtém elementos
-//--------------------------------------------------
-// Obtém elemento
-
-//--------------------------------------------------
-// Obtém elementos
-//--------------------------------------------------
+//--------------------------------------------------    
 // Obtém elementos
 const video = document.getElementById('bg-video');
 const questionContainer = document.querySelector('.question-container');
-const writingSound = document.getElementById('writing-sound');
 
-// Garante que o áudio está carregado
-writingSound.play().then(() => {
-    console.log("Áudio carregado com sucesso.");
-}).catch(err => {
-    console.warn("Áudio bloqueado pelo navegador, aguardando interação...");
-});
 
-// Detecta qualquer clique e desmuta o áudio
-document.addEventListener('click', () => {
-    writingSound.muted = false; // Agora o áudio pode tocar normalmente
-    console.log("Interação detectada! Áudio desmutado.");
-}, { once: true }); // Executa apenas na primeira interação
 
-// Quando o vídeo terminar...
-video.addEventListener('ended', () => {
-    // Exibe a pergunta
-    questionContainer.classList.add('show-question');
-
-    // Garante que o áudio está no início e toca
-    writingSound.currentTime = 0;
-    writingSound.play().catch(err => console.warn("Erro ao tocar áudio:", err));
-
-    // Para o som após 9 segundos
+video.addEventListener('play', () => {
     setTimeout(() => {
-        writingSound.pause();
-        writingSound.currentTime = 0;
-    }, 9000);
+        questionContainer.classList.add('show-question');
+    }, 10000); // Aguarda 10 segundos
 });
