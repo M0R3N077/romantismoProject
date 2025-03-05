@@ -135,14 +135,6 @@ function setPositionThumbnail() {
     }
 }
 
-// Ajustar posição do thumbnail ao mudar de slide
-function setPositionThumbnail() {
-    let thumbnailActive = document.querySelector(".thumbnail .item.active");
-    if (thumbnailActive) {
-        thumbnailActive.scrollIntoView({ behavior: "smooth", inline: "center" });
-    }
-}
-
 // CLICK THUMBNAIL
 thumbnails.forEach((thumbnail, index) => {
     thumbnail.addEventListener("click", () => {

@@ -2,7 +2,7 @@
 const swiper = new Swiper(".slider-wrapper", {
   loop: true,
   grabCursor: true,
-  spaceBetween: 30,
+  spaceBetween: 5,
 
   pagination: {
     el: ".swiper-pagination",
@@ -17,13 +17,13 @@ const swiper = new Swiper(".slider-wrapper", {
 
   breakpoints: {
     0: {
-      slidesPerView: 1,
-    },
-    768: {
       slidesPerView: 2,
     },
-    1024: {
+    768: {
       slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
     },
   },
 });
@@ -104,36 +104,102 @@ const periodCards = {
       image:
         "https://m.media-amazon.com/images/I/91-16juFmnL._AC_UF1000,1000_QL80_.jpg",
     },
-    { image: "https://m.media-amazon.com/images/I/81dQ4061MaL._AC_UF350,350_QL50_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/71vnoOyoz0L._AC_UF1000,1000_QL80_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/91T7p2VV5MS._AC_UF1000,1000_QL80_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/91bcC5kcAPL._AC_UF1000,1000_QL80_.jpg" },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/81dQ4061MaL._AC_UF350,350_QL50_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/71vnoOyoz0L._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/91T7p2VV5MS._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/91bcC5kcAPL._AC_UF1000,1000_QL80_.jpg",
+    },
     { image: "https://m.media-amazon.com/images/I/71UHD7DqLNL.jpg" },
-    { image: "https://m.media-amazon.com/images/I/71GCN3T0BTL._AC_UF1000,1000_QL80_.jpg" },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/71GCN3T0BTL._AC_UF1000,1000_QL80_.jpg",
+    },
   ],
   urbanista: [
-    { image: "https://m.media-amazon.com/images/I/61rqadtSs3S._AC_UF1000,1000_QL80_.jpg" },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/61rqadtSs3S._AC_UF1000,1000_QL80_.jpg",
+    },
     { image: "https://m.media-amazon.com/images/I/71iI+JrX6SL.jpg" },
-    { image: "https://m.media-amazon.com/images/I/71m+rJT1e1L._AC_UF1000,1000_QL80_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/61ggTTE+deL._AC_UF1000,1000_QL80_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/714y2hfhljL._AC_UF1000,1000_QL80_.jpg" },
-    { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtqJ0SRO8XltnaIhOiiF_Ei1hkXjlVpRShfw&s" },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/71m+rJT1e1L._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/61ggTTE+deL._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/714y2hfhljL._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtqJ0SRO8XltnaIhOiiF_Ei1hkXjlVpRShfw&s",
+    },
   ],
   regionalista: [
-    { image: "https://m.media-amazon.com/images/I/91yl-UZm+wS._AC_UF1000,1000_QL80_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/815fFEIezPS._AC_UF1000,1000_QL80_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/9135crSSTaS._AC_UF1000,1000_QL80_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/81j8ocnADUL._AC_UF1000,1000_QL80_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/81w7bTurZGS._AC_UF1000,1000_QL80_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/81Ehk8ESqXS._AC_UF1000,1000_QL80_.jpg" },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/91yl-UZm+wS._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/815fFEIezPS._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/9135crSSTaS._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/81j8ocnADUL._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/81w7bTurZGS._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/81Ehk8ESqXS._AC_UF1000,1000_QL80_.jpg",
+    },
   ],
   historico: [
-    { image: "https://m.media-amazon.com/images/I/619xwAPWNkL._UF894,1000_QL80_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/71Hkl1xogyL._AC_UF1000,1000_QL80_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/71PiSYoxNWL._UF894,1000_QL80_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/717+VJGDMhL._AC_UF1000,1000_QL80_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/81j8ocnADUL._AC_UF1000,1000_QL80_.jpg" },
-    { image: "https://m.media-amazon.com/images/I/71jZeuC3uWL._AC_UF1000,1000_QL80_.jpg" },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/619xwAPWNkL._UF894,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/71Hkl1xogyL._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/71PiSYoxNWL._UF894,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/717+VJGDMhL._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/81j8ocnADUL._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      image:
+        "https://m.media-amazon.com/images/I/71jZeuC3uWL._AC_UF1000,1000_QL80_.jpg",
+    },
   ],
 };
 
