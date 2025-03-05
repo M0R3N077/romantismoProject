@@ -34,7 +34,7 @@ newGameBtn.addEventListener("click", () => {
         localStorage.removeItem("animationPlayed");
         window.location.href = '../../game.html';
     } else {
-        alert("Infelizmente, nosso jogo só funciona para computadores!");
+        alert("Infelizmente, nosso jogo não é adequado ao tamanho de tela do seu dispositivo, procure um dispositivo com uma tela maior e tente jogar novamente!");
     }
 
 })
@@ -117,11 +117,29 @@ function showSlider() {
         next.click();
     }, 5000)
 }
+
+// Responsividade para o slider (muda tempo do auto-play dependendo do tamanho da tela)
+function ajustarTempoSlider() {
+    let intervalo = window.innerWidth <= 768 ? 6000 : 8000;
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(() => {
+        next.click();
+    }, intervalo);
+}
+
 function setPositionThumbnail() {
     let thumbnailActive = document.querySelector(".thumbnail .item.active");
     let rect = thumbnailActive.getBoundingClientRect();
     if (rect.left < 0 || rect.right > window.innerWidth) {
         thumbnailActive.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    }
+}
+
+// Ajustar posição do thumbnail ao mudar de slide
+function setPositionThumbnail() {
+    let thumbnailActive = document.querySelector(".thumbnail .item.active");
+    if (thumbnailActive) {
+        thumbnailActive.scrollIntoView({ behavior: "smooth", inline: "center" });
     }
 }
 
@@ -132,6 +150,10 @@ thumbnails.forEach((thumbnail, index) => {
         showSlider();
     })
 })
+
+// Atualiza ao redimensionar a tela
+window.addEventListener("resize", ajustarTempoSlider);
+ajustarTempoSlider();
 
 // SWIPER JS
 const swiper = new Swiper(".slider-wrapper", {
@@ -151,17 +173,30 @@ const swiper = new Swiper(".slider-wrapper", {
     },
 
     breakpoints: {
-        0: {
+        0: {  // Celulares pequenos
             slidesPerView: 1
         },
-        768: {
-            slidesPerView: 2
+        480: { // Celulares médios
+            slidesPerView: 1,
+            spaceBetween: 15
         },
-        1024: {
-            slidesPerView: 3
+        600: { // Celulares grandes
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        768: { // Tablets
+            slidesPerView: 2,
+            spaceBetween: 25
+        },
+        1024: { // Desktop
+            slidesPerView: 3,
+        },
+        1280: { // Telas maiores
+            slidesPerView: 4
         }
     }
 });
+
 
 // MODAL
 const cardsData = {

@@ -199,6 +199,40 @@ body {
   transition: opacity 1s ease-in-out;
 }
 
+/* 📍 Para telas menores que 1024px (tablets) */
+@media (max-width: 1024px) {
+  #newGameBtn {
+    font-size: 20px;
+    padding: 0.5em 0.8em;
+  }
+}
+/* 📍 Para telas menores que 768px (celulares grandes) */
+@media (max-width: 768px) {
+  .main-buttons {
+    flex-direction: column; /* Empilha os botões */
+    gap: 1rem;
+  }
+  #newGameBtn {
+    font-size: 18px;
+    padding: 0.4em 0.7em;
+    width: 100%;
+    max-width: 250px; /* Evita que fiquem muito largos */
+  }
+  #newGameBtn svg {
+    font-size: 16px;
+  }
+}
+/* 📍 Para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  #newGameBtn {
+    font-size: 16px;
+    padding: 0.3em 0.6em;
+    max-width: 220px;
+  }
+  #newGameBtn svg {
+    font-size: 14px;
+  }
+}
 .slider {
   color: white;
   min-height: 100dvh;
@@ -356,15 +390,81 @@ body {
   inset: auto 10px 10px 10px;
 }
 
-@media screen and (max-width: 768px) {
+/* 📍 Para telas menores que 1024px (tablets) */
+@media (max-width: 1024px) {
+  .slider .list .item .content {
+    left: 5%;
+    width: 400px;
+  }
+  .slider .list .item .content h2 {
+    font-size: 2rem;
+  }
+  .slider .list .item .content p {
+    font-size: 0.9rem;
+  }
+  .arrows {
+    top: 40%;
+    right: 30px;
+  }
+}
+#princess {
+  width: 320px;
+}
+
+/* 📍 Para telas menores que 768px (celulares grandes) */
+@media (max-width: 768px) {
+  .slider .list .item .content {
+    width: 90%;
+    left: 5%;
+    top: 20%;
+  }
+  .slider .list .item .content h2 {
+    font-size: 1.8rem;
+  }
+  .slider .list .item .content p {
+    font-size: 0.8rem;
+  }
+  .arrows {
+    top: 45%;
+    right: 20px;
+  }
   .thumbnail {
-    justify-content: start;
+    height: 180px;
+  }
+  .thumbnail .item {
+    width: 120px;
+    height: 170px;
+  }
+}
+/* 📍 Para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .slider .list .item .content {
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    left: 0;
   }
   .slider .list .item .content h2 {
     font-size: 1.5rem;
   }
+  .slider .list .item .content p {
+    font-size: 0.7rem;
+  }
+  #continueBtn {
+    font-size: 14px;
+    padding: 5px 8px;
+    margin-left: 10px;
+  }
   .arrows {
-    top: 10%;
+    top: 60%;
+    right: 10px;
+  }
+  .thumbnail {
+    height: 150px;
+  }
+  .thumbnail .item {
+    width: 100px;
+    height: 140px;
   }
 }
 .swiper {
@@ -468,12 +568,51 @@ body {
   color: black;
 }
 
+/* Para telas menores que 1024px (tablets) */
+@media (max-width: 1024px) {
+  .slider-wrapper {
+    max-width: 900px;
+  }
+}
+/* Para telas menores que 768px (celulares grandes) */
 @media (max-width: 768px) {
   .slider-wrapper {
-    margin: 0 65px;
+    max-width: 600px;
   }
-  .slider-wrapper .swiper-slide-button {
-    display: none;
+  .card-list .card-item img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+  .card-list .card-item .user-profession {
+    font-size: 0.9rem;
+  }
+  .card-list .card-item button {
+    font-size: 18px;
+    padding: 8px 30px;
+  }
+}
+.title {
+  font-family: "Press Start 2P";
+  font-size: 50px;
+}
+
+/* Para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .slider-wrapper {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .card-list .card-item img {
+    width: 100px;
+    height: 100px;
+  }
+  .card-list .card-item .user-profession {
+    font-size: 0.8rem;
+  }
+  .card-list .card-item button {
+    font-size: 16px;
+    padding: 6px 25px;
   }
 }
 .modal {
@@ -588,6 +727,42 @@ body {
   margin-top: 50px;
 }
 
+/* Para telas menores que 1024px (tablets) */
+@media (max-width: 1024px) {
+  .participants {
+    grid-template-columns: repeat(3, 1fr); /* Reduz para 3 colunas */
+    gap: 12px;
+    padding: 0 30px 30px 30px;
+  }
+}
+/* Para telas menores que 768px (celulares grandes) */
+@media (max-width: 768px) {
+  .participants {
+    grid-template-columns: repeat(2, 1fr); /* Reduz para 2 colunas */
+    gap: 10px;
+    padding: 0 20px 25px 20px;
+  }
+  .services-content h2 {
+    font-size: 32px;
+  }
+  .services-content p {
+    font-size: 14px;
+  }
+}
+/* Para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .participants {
+    grid-template-columns: 1fr !important; /* Apenas uma coluna */
+    gap: 8px;
+    padding: 0 15px 20px 15px;
+  }
+  .services-content h2 {
+    font-size: 28px;
+  }
+  .services-content p {
+    font-size: 13px;
+  }
+}
 .sesi-logo {
   display: flex;
   align-items: center;
@@ -718,21 +893,6 @@ footer {
   }
   .participant img {
     max-width: 740px;
-  }
-}
-@media (max-width: 330px) {
-  .intro-content h1 {
-    font-size: 50px;
-  }
-  #princess {
-    width: 300px;
-  }
-  .main-buttons {
-    width: 100px;
-    gap: 30px;
-  }
-  .participants div.participant {
-    width: 200px;
   }
 }
 .bodyGame {
@@ -1018,6 +1178,40 @@ footer {
   justify-content: center;
   align-items: center;
   font-family: "Poppins";
+}
+
+#tutorial {
+  display: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 50px;
+  font-family: "Machinery";
+  animation: tutorial 10s ease-in-out;
+}
+
+@keyframes tutorial {
+  0% {
+    opacity: 0;
+    display: flex;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+#btnStartVideo {
+  width: 500px;
+  height: 700px;
+  z-index: 9999;
+  position: absolute;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
 }
 
 #bg-video {

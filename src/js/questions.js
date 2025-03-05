@@ -1,5 +1,22 @@
 import { score, messages } from "./data.js";
 
+
+//Se clicar no video, ele starta
+document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("bg-video");
+    const btnStartVideo = document.getElementById('btnStartVideo');
+
+    btnStartVideo.addEventListener("click", () => {
+        if (video.paused) {
+            video.play();
+            btnStartVideo.style.display = 'none';
+        } 
+        // else {
+        //     video.pause();
+        // }
+    });
+});
+
 const getCurrentPage = () => window.location.pathname.split("/").pop().replace(".html", "");
 
 let choiceMade = false;
