@@ -3,7 +3,7 @@ const text = textElement.textContent;
 textElement.textContent = ""; 
 
 const typingSound = new Audio("../../../assets/sounds/typing.mp3"); // Som de digitação
-typingSound.volume = 0.35; // Ajusta o volume
+typingSound.volume = 0.45; // Ajusta o volume
 typingSound.loop = true;
 
 let index = 0;
@@ -276,7 +276,7 @@ window.onload = () => {
 
 const backgroundMusic = new Audio("../../../assets/sounds/background.mp3");
 backgroundMusic.loop = true;
-backgroundMusic.volume = 0.8;
+backgroundMusic.volume = 1;
 let musicOn = true;
 
 const stepSound = new Audio("../../../assets/sounds/steps.mp3");
