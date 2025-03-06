@@ -2,6 +2,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: linear-gradient(to bottom, white, black);
 }
 
 .final-container {
@@ -16,7 +17,6 @@
   text-align: center;
   min-height: 100dvh;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   gap: 1rem;
 }
 

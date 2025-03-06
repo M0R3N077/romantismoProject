@@ -303,23 +303,19 @@ body {
     opacity: 1;
   }
 }
-.slider .list .item.active p:nth-child(1),
-.slider .list .item.active h2,
-.slider .list .item.active p:nth-child(3),
-.slider .list .btn-class-name {
+.slider .list .item.active .btn-class-name {
   transform: translateY(30px);
   filter: blur(20px);
   opacity: 0;
   animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
 }
 
-.slider .list .item.active h2,
-.slider .list .btn-class-name {
-  animation-delay: 1s;
+.slider .list .item.active .btn-class-name {
+  animation-delay: 0.3s;
 }
 
 .slider .list .item.active p:nth-child(3),
-.slider .list .btn-class-name {
+.slider .list .item .btn-class-name {
   animation-duration: 1.3s;
 }
 
@@ -867,7 +863,7 @@ footer {
 }
 
 .participant img:hover {
-  scale: 1.2;
+  scale: 1.1;
   z-index: 1;
 }
 
@@ -1181,7 +1177,7 @@ footer {
 }
 
 #tutorial {
-  display: none;
+  opacity: 0;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -1200,7 +1196,7 @@ footer {
   }
   100% {
     opacity: 0;
-    display: none;
+    pointer-events: none;
   }
 }
 #btnStartVideo {
@@ -1420,6 +1416,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: linear-gradient(to bottom, white, black);
 }
 
 .final-container {
@@ -1434,7 +1431,6 @@ footer {
   text-align: center;
   min-height: 100dvh;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   gap: 1rem;
 }
 
