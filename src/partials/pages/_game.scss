@@ -94,8 +94,8 @@
   background: url("../../../assets/backgrounds/divJogo.png") no-repeat center
     center/cover;
   display: block;
-  width: 550px; //719px Tamanho original da foto
-  height: 574px; //768px Tamanho original da foto
+  width: 550px;
+  height: 574px; 
 }
 
 @media (max-width: 768px) {
@@ -146,7 +146,6 @@
   animation: aparecer 0.5s ease-out forwards, flutuar 3s infinite ease-in-out;
 }
 
-/* Animação de aparecimento */
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -158,20 +157,18 @@
   }
 }
 
-/* Efeito de flutuação contínua */
 @keyframes flutuar {
   0% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-13px);
-  } /* Sobe mais alto */
+  } 
   100% {
     transform: translateY(0);
   }
 }
 
-/* Adicionando camadas extras com sombras para dar um efeito 3D */
 .titleGame span::before,
 .titleGame span::after {
   content: attr(data-letter);
@@ -191,7 +188,6 @@
   transform: translate(2px, 2px);
 }
 
-/* Atraso progressivo para um efeito mais natural */
 .titleGame span:nth-child(1) {
   animation-delay: 0s, 1s;
 }

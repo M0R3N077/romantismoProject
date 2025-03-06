@@ -1,78 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pergunta 3 - Escolha seu Caminho</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script type="module" src="./src/js/questions.js" defer></script>
-</head>
-<body id="bodyQuestionOne">
-  <div id="btnStartVideo"></div>
+  </head>
+  <body id="bodyQuestionOne">
+    <div id="btnStartVideo"></div>
 
-  <video id="bg-video">
-      <source src="./assets/backgrounds/videoQuestion.mp4" type="video/mp4">
+    <video id="bg-video">
+      <source src="./assets/backgrounds/videoQuestion.mp4" type="video/mp4" />
       Seu navegador não suporta vídeos em HTML5.
-  </video>
+    </video>
 
     <div class="question-container">
-        <p class="question">O Chamado da Aventura Você segue viagem, mas se depara com um momento decisivo. Uma <br> situação inesperada surge diante de você:</p>
-        <p><strong>"Ao caminhar por uma trilha, você ouve um <br> grito distante. Quando se aproxima,  vê uma pessoa <br> em perigo. O que você faz?"</strong></p>
+      <p class="question">
+        O Chamado da Aventura Você segue viagem, mas se depara com um momento
+        decisivo. Uma <br />
+        situação inesperada surge diante de você:
+      </p>
+      <p>
+        <strong
+          >"Ao caminhar por uma trilha, você ouve um <br />
+          grito distante. Quando se aproxima, vê uma pessoa <br />
+          em perigo. O que você faz?"</strong
+        >
+      </p>
 
-        <div class="choices-um" style="margin-top: 10px; margin-bottom: 20px;">
-            <button class="choice" data-choice="indianista">
-                "Salto imediatamente para ajudar! A vida é sagrada e a floresta protege aqueles que a respeitam."
-                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
-                  <path class="x-line" d="M20,20 Q50,25 80,80"
-                    stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                  <path class="x-line" d="M80,20 Q50,15 20,80"
-                    stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                </svg>
-            </button>
-        
-            <button class="choice" data-choice="urbanista">
-                "Antes de agir, analiso a situação. Será que vale a pena me envolver? Talvez a pessoa possa me retribuir de alguma forma."
-                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <path class="x-line" d="M20,20 Q50,25 80,80"
-                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                    <path class="x-line" d="M80,20 Q50,15 20,80"
-                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                </svg>
-            </button>
-        </div>
-        <div class="choices-dois">
-            <button class="choice" data-choice="regionalista">
-                "Vejo que é um trabalhador como eu, então corro para ajudá-lo. Na terra, somos todos irmãos."
-                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <path class="x-line" d="M20,20 Q50,25 80,80"
-                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                    <path class="x-line" d="M80,20 Q50,15 20,80"
-                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                </svg>
-            </button>
-            <button class="choice" data-choice="historico">
-                "Observo de longe. Interferir pode ser arriscado, e um líder precisa agir com estratégia."
-                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <path class="x-line" d="M20,20 Q50,25 80,80"
-                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                    <path class="x-line" d="M80,20 Q50,15 20,80"
-                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                </svg>
-            </button>
-        </div>
+      <div class="choices-um" style="margin-top: 10px; margin-bottom: 20px">
+        <button class="choice" data-choice="regionalista">
+          "Vejo que é um trabalhador como eu, então corro para ajudá-lo. Na
+          terra, somos todos irmãos."
+          <svg
+            class="x-animation"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              class="x-line"
+              d="M20,20 Q50,25 80,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <path
+              class="x-line"
+              d="M80,20 Q50,15 20,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <button class="choice" data-choice="urbanista">
+          "Antes de agir, analiso a situação. Será que vale a pena me envolver?
+          Talvez a pessoa possa me retribuir de alguma forma."
+          <svg
+            class="x-animation"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              class="x-line"
+              d="M20,20 Q50,25 80,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <path
+              class="x-line"
+              d="M80,20 Q50,15 20,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="choices-dois">
+        <button class="choice" data-choice="indianista">
+          "Salto imediatamente para ajudar! A vida é sagrada e a floresta
+          protege aqueles que a respeitam."
+          <svg
+            class="x-animation"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              class="x-line"
+              d="M20,20 Q50,25 80,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <path
+              class="x-line"
+              d="M80,20 Q50,15 20,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <button class="choice" data-choice="historico">
+          "Observo de longe. Interferir pode ser arriscado, e um líder precisa
+          agir com estratégia."
+          <svg
+            class="x-animation"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              class="x-line"
+              d="M20,20 Q50,25 80,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <path
+              class="x-line"
+              d="M80,20 Q50,15 20,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
 
     <div id="next-button-modal" class="next-button-modal">
-        <div class="next-button-modal-content">
-            <h1 id="modal-title"></h1>
-            <p id="result-text"></p>
-            <button id="next-button" class="btn-class-name">
-              <span>Avançar</span>
-              <svg viewBox="0 0 320 512" height="1em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
-              </svg>
-          </button>
-        </div>
+      <div class="next-button-modal-content">
+        <h1 id="modal-title"></h1>
+        <p id="result-text"></p>
+        <button id="next-button" class="btn-class-name">
+          <span>Avançar</span>
+          <svg
+            viewBox="0 0 320 512"
+            height="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+            ></path>
+          </svg>
+        </button>
+      </div>
     </div>
-</body>
+  </body>
 </html>

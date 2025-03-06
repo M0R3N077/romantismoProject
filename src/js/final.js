@@ -81,7 +81,7 @@ menuButton.addEventListener("click", () => {
   window.location.href = "index.html";
 });
 
-const finalBody = document.getElementById("final-body");
+const finalContainer = document.querySelector(".final-container");
 
 const themeBackgrounds = {
   indianista: "url('../../assets/finalImg/indianista.png')",
@@ -93,9 +93,9 @@ const themeBackgrounds = {
 if (resultThemes.length >= 1) {
   const randomTheme =
     resultThemes[Math.floor(Math.random() * resultThemes.length)];
-  finalBody.style.backgroundImage = themeBackgrounds[randomTheme];
+  finalContainer.style.backgroundImage = `linear-gradient(to bottom, rgba(255, 255, 255, 0.03), rgba(0,0,0,1)), ${themeBackgrounds[randomTheme]}`;
 } else {
-  finalBody.style.backgroundImage = "url('default.jpg')";
+  finalContainer.style.backgroundImage = `url('default.jpg')`;
 }
 
 const periodCards = {

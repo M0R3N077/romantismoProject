@@ -1031,7 +1031,6 @@ footer {
   animation: aparecer 0.5s ease-out forwards, flutuar 3s infinite ease-in-out;
 }
 
-/* Animação de aparecimento */
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -1042,19 +1041,17 @@ footer {
     transform: translateY(0);
   }
 }
-/* Efeito de flutuação contínua */
 @keyframes flutuar {
   0% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-13px);
-  } /* Sobe mais alto */
+  }
   100% {
     transform: translateY(0);
   }
 }
-/* Adicionando camadas extras com sombras para dar um efeito 3D */
 .titleGame span::before,
 .titleGame span::after {
   content: attr(data-letter);
@@ -1074,7 +1071,6 @@ footer {
   transform: translate(2px, 2px);
 }
 
-/* Atraso progressivo para um efeito mais natural */
 .titleGame span:nth-child(1) {
   animation-delay: 0s, 1s;
 }
@@ -1225,14 +1221,14 @@ footer {
 .question-container {
   display: flex;
   flex-direction: column;
-  min-width: -200px; /* Começa fechada */
-  max-width: 61vw; /* Tamanho final */
+  min-width: -200px;
+  max-width: 61vw;
   padding: 0 100px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  overflow: hidden; /* Oculta conteúdo fora da div */
-  white-space: nowrap; /* Evita que o texto quebre enquanto a div se expande */
+  overflow: hidden;
+  white-space: nowrap;
   opacity: 0;
 }
 
@@ -1245,8 +1241,8 @@ footer {
   }
 }
 .question-container.show-question {
-  display: flex; /* Torna visível */
-  opacity: 1; /* Animação de fade-in */
+  display: flex;
+  opacity: 1;
   animation: expandirPergaminho 9s ease;
 }
 
@@ -1260,7 +1256,7 @@ footer {
 .question {
   margin-top: 0px;
   min-width: 750px;
-  white-space: wrap; /* Evita que o texto quebre enquanto a div se expande */
+  white-space: wrap;
 }
 
 .next-button-modal {
@@ -1279,11 +1275,11 @@ footer {
 }
 
 #next-button-modal {
-  background-size: cover; /* Faz a imagem cobrir todo o elemento */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Impede a repetição da imagem */
-  width: 100%; /* Ajusta à largura do contêiner */
-  height: 100vh; /* Faz com que ocupe toda a altura da tela */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
 }
 
 @keyframes modal {
@@ -1328,7 +1324,7 @@ footer {
   gap: 80px;
   margin-top: 60px;
   margin-bottom: 30px;
-  white-space: nowrap; /* Evita que o texto quebre enquanto a div se expande */
+  white-space: nowrap;
 }
 
 .choices-dois {
@@ -1337,21 +1333,16 @@ footer {
   margin-right: 15px;
   flex-direction: row;
   gap: 80px;
-  white-space: nowrap; /* Evita que o texto quebre enquanto a div se expande */
+  white-space: nowrap;
 }
 
-/* From Uiverse.io by barisdogansutcu */
 .choice {
   all: unset;
   font-family: "Machinery";
   color: black;
   margin-top: 50px;
   min-width: 300px;
-  white-space: wrap; /* Evita que o texto quebre enquanto a div se expande */
-}
-
-.choice:active {
-  box-shadow: inset -1px -1px #fff, inset 1px 1px #292929, inset -2px -2px #ffffff, inset 2px 2px rgb(158, 158, 158);
+  white-space: wrap;
 }
 
 .choice {
@@ -1366,7 +1357,6 @@ footer {
   padding: 15px;
 }
 
-/* Ajuste para que o X fique maior que o contêiner */
 .x-animation {
   position: absolute;
   top: -10%;
@@ -1374,10 +1364,9 @@ footer {
   width: 120%;
   height: 120%;
   pointer-events: none;
-  opacity: 0; /* Inicialmente invisível */
+  opacity: 0;
 }
 
-/* Configuração inicial para os traços do X */
 .x-animation .x-line {
   stroke-dasharray: 90;
   stroke-dashoffset: 90;
@@ -1385,38 +1374,26 @@ footer {
   transition: stroke-dashoffset 0.3s ease-out;
 }
 
-/* Primeira linha: sem delay */
 .x-animation .x-line:nth-child(1) {
   transition-delay: 0s;
 }
 
-/* Segunda linha: inicia 0.3s depois */
 .x-animation .x-line:nth-child(2) {
   transition-delay: 0.3s;
 }
 
-/* Quando passa o mouse, o X aparece instantaneamente */
 .choice:hover .x-animation {
   opacity: 1;
-  transition: none; /* Remove a transição ao aparecer */
+  transition: none;
 }
 
-/* Desenha o X */
 .choice:hover .x-animation .x-line {
   stroke-dashoffset: 0;
 }
 
-/* Quando o mouse sai, o X desaparece suavemente */
 .choice:not(:hover) .x-animation {
-  transition: opacity 0.4s ease-out; /* Aplica a transição apenas na saída */
+  transition: opacity 0.4s ease-out;
   opacity: 0;
-}
-
-#final-body {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(to bottom, white, black);
 }
 
 .final-container {
@@ -1432,6 +1409,9 @@ footer {
   min-height: 100dvh;
   width: 100%;
   gap: 1rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .final-card-list .final-card-item {

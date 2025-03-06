@@ -1,78 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pergunta 4 - Escolha seu Caminho</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script type="module" src="./src/js/questions.js" defer></script>
-</head>
-<body id="bodyQuestionOne">
-  <div id="btnStartVideo"></div>
+  </head>
+  <body id="bodyQuestionOne">
+    <div id="btnStartVideo"></div>
 
-  <video id="bg-video">
-      <source src="./assets/backgrounds/videoQuestion.mp4" type="video/mp4">
+    <video id="bg-video">
+      <source src="./assets/backgrounds/videoQuestion.mp4" type="video/mp4" />
       Seu navegador não suporta vídeos em HTML5.
-  </video>
+    </video>
 
     <div class="question-container">
-        <p class="question">O Valor do Conhecimento Após o evento anterior, você se aproxima de um vilarejo. Em uma pequena praça, um grupo de intelectuais discute acaloradamente sobre o futuro do Brasil. Um deles vira-se para você e pergunta:</p>
-        <p><strong>"O que você considera a base para um país forte e próspero?"</strong></p>
+      <p class="question">
+        O Valor do Conhecimento Após o evento anterior, você se aproxima de um
+        vilarejo. Em uma pequena praça, um grupo de intelectuais discute
+        acaloradamente sobre o futuro do Brasil. Um deles vira-se para você e
+        pergunta:
+      </p>
+      <p>
+        <strong
+          >"O que você considera a base para um país forte e próspero?"</strong
+        >
+      </p>
 
-        <div class="choices-um">
-            <button class="choice" data-choice="indianista">
-                "A sabedoria ancestral e a conexão com a natureza são os verdadeiros pilares da vida."
-                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
-                  <path class="x-line" d="M20,20 Q50,25 80,80"
-                    stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                  <path class="x-line" d="M80,20 Q50,15 20,80"
-                    stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                </svg>
-            </button>
-        
-            <button class="choice" data-choice="urbanista">
-                "A educação e a cultura trazem progresso. A cidade precisa de escolas, jornais e debates."
-                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <path class="x-line" d="M20,20 Q50,25 80,80"
-                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                    <path class="x-line" d="M80,20 Q50,15 20,80"
-                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                </svg>
-            </button>
-        </div>
-        <div class="choices-dois">
-            <button class="choice" data-choice="regionalista">
-                "O trabalho duro e a terra são o coração desta nação. Sem eles, não há futuro."
-                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <path class="x-line" d="M20,20 Q50,25 80,80"
-                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                    <path class="x-line" d="M80,20 Q50,15 20,80"
-                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                </svg>
-            </button>
-            <button class="choice" data-choice="historico">
-                "A ordem e a disciplina garantem o poder. Quem controla a história, controla o destino."
-                <svg class="x-animation" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <path class="x-line" d="M20,20 Q50,25 80,80"
-                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                    <path class="x-line" d="M80,20 Q50,15 20,80"
-                      stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" />
-                </svg>
-            </button>
-        </div>
+      <div class="choices-um">
+        <button class="choice" data-choice="indianista">
+          "A sabedoria ancestral e a conexão com a natureza são os verdadeiros
+          pilares da vida."
+          <svg
+            class="x-animation"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              class="x-line"
+              d="M20,20 Q50,25 80,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <path
+              class="x-line"
+              d="M80,20 Q50,15 20,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <button class="choice" data-choice="regionalista">
+          "O trabalho duro e a terra são o coração desta nação. Sem eles, não há
+          futuro."
+          <svg
+            class="x-animation"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              class="x-line"
+              d="M20,20 Q50,25 80,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <path
+              class="x-line"
+              d="M80,20 Q50,15 20,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="choices-dois">
+        <button class="choice" data-choice="urbanista">
+          "A educação e a cultura trazem progresso. A cidade precisa de escolas,
+          jornais e debates."
+          <svg
+            class="x-animation"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              class="x-line"
+              d="M20,20 Q50,25 80,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <path
+              class="x-line"
+              d="M80,20 Q50,15 20,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <button class="choice" data-choice="historico">
+          "A ordem e a disciplina garantem o poder. Quem controla a história,
+          controla o destino."
+          <svg
+            class="x-animation"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              class="x-line"
+              d="M20,20 Q50,25 80,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <path
+              class="x-line"
+              d="M80,20 Q50,15 20,80"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
 
     <div id="next-button-modal" class="next-button-modal">
-        <div class="next-button-modal-content">
-            <h1 id="modal-title"></h1>
-            <p id="result-text"></p>
-            <button id="next-button" class="btn-class-name">
-              <span>Avançar</span>
-              <svg viewBox="0 0 320 512" height="1em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
-              </svg>
-          </button>
-        </div>
+      <div class="next-button-modal-content">
+        <h1 id="modal-title"></h1>
+        <p id="result-text"></p>
+        <button id="next-button" class="btn-class-name">
+          <span>Avançar</span>
+          <svg
+            viewBox="0 0 320 512"
+            height="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+            ></path>
+          </svg>
+        </button>
+      </div>
     </div>
-</body>
+  </body>
 </html>
